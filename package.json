@@ -1,0 +1,20 @@
+{
+  "name": "love-gift",
+  "version": "1.0.0",
+  "description": "my love gift to girlfriend",
+  "scripts": {
+      "build": "coffee -c src/index.coffeescript"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idealclover/Love-Gift.git"
+  },
+  "author": "idealclover",
+  "bugs": {
+    "url": "https://github.com/idealclover/Love-Gift/issues"
+  },
+  "homepage": "https://github.com/idealclover/Love-Gift#readme",
+  "dependencies": {
+    "coffee-script": "^1.12.7"
+  }
+}
