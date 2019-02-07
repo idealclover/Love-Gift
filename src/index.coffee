@@ -14,32 +14,20 @@ body {
 
 /*
  * ...
- *
  * ...hello?
- *
  * 大家好！我是翠翠！idealclover~
- *
  * 我在这里 祖国的大东北 苦逼地码着代码
- *
  * 情人节快到了，可是还见不到女朋友 怎么办呢
- *
  * 写一个网页送给她吧！送她一颗小心心怎么样~
- *
  * 灵感来源是国外的一位网友pen#PwlXPP
- *
  * 可是~要怎么做呢~
- *
  * 让我们一步一步来吧！
- *
  */
 
 /*
  * 首先我们要做一个框框来放我们的代码~
- *
  * 怎么做呢~看好啦~
- *
  * 接下来~不要眨眼哦~
- *
  */
 
 pre {
@@ -58,11 +46,8 @@ pre {
 
 /*
  * 不行不行，全是白色看代码都要看昏了
- *
  * 我需要语法高亮~那我们就动手实现一下它吧~
- *
  * Colors based on Base16 Ocean Dark
- *
  */
 
 pre em:not(.comment) { font-style: normal; }
@@ -76,9 +61,8 @@ pre em:not(.comment) { font-style: normal; }
 
 /*
  * 呦吼你看~代码高亮实现啦~接下来我们开工吧！
- *
  * 首先我们把这个代码框移一下吧~它太占地方啦
- *
+ * 由于是响应式布局~所以在手机上和电脑上有不同的显示效果呦
  */
 
 @media screen and (max-width: 768px) {
@@ -91,7 +75,6 @@ pre em:not(.comment) { font-style: normal; }
 
 /*
  * 用代码做一颗小心心！
- *
  */
 
 @media screen and (max-width: 768px) {
@@ -163,9 +146,7 @@ pre em:not(.comment) { font-style: normal; }
 
 /*
  * 这可是~我的小心心~
- *
  * 我要给它签上我的名字！
- *
  * >v<
  */
 
@@ -185,9 +166,7 @@ pre em:not(.comment) { font-style: normal; }
 
 /*
  * 接下来做什么呢~
- *
  * 我们让这颗心跳起来吧！
- *
  */
 
 @-webkit-keyframes heartbeat {
@@ -232,7 +211,7 @@ pre em:not(.comment) { font-style: normal; }
 
 
 /*
- * Beautiful! Now for the beating...
+ * 好哒！接下来准备让它跳起来吧ww
  */
 
 #heart, #echo {
@@ -262,7 +241,6 @@ pre em:not(.comment) { font-style: normal; }
 
 /*
  * 准备好了嘛~！
- *
  */
 
 #heart, #echo {
@@ -299,7 +277,6 @@ pre em:not(.comment) { font-style: normal; }
  * This pen loves CodePen!
  *
  * 亲爱哒！情人节快乐！
- *
  * 爱你哦！
  *
  */
@@ -353,6 +330,7 @@ time = 30
 
 # starting it off
 writeStyles(styles, 0, time)
+
 
 ###
 Changelog:
