@@ -8,7 +8,7 @@ styles = """
 
 body {
   background-color: #1a1c24; color: #fff;
-  font-size: 20px; line-height: 1.4;
+  font-size: 1.2rem; line-height: 1.4;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -43,8 +43,8 @@ body {
  */
 
 pre {
-  position: fixed; width: 48%;
-  top: 30px; bottom: 30px; left: 26%;
+  position: fixed;
+  top: 30px; bottom: 30px;
   transition: left 500ms;
   overflow: auto;
   background-color: #313744; color: #a6c3d4;
@@ -77,26 +77,47 @@ pre em:not(.comment) { font-style: normal; }
 /*
  * 呦吼你看~代码高亮实现啦~接下来我们开工吧！
  *
- * 首先我们把这个代码框移一下吧~它台站地方啦
+ * 首先我们把这个代码框移一下吧~它太占地方啦
  *
  */
 
-pre { left: 50%; }
+@media screen and (max-width: 768px) {
+    pre { left: 6%;right: 6%;top: 50%; }
+}
 
+@media screen and (min-width: 768px) {
+    pre { width: 48%;left: 50%;bottom: 30px; }
+}
 
 /*
  * 用代码做一颗小心心！
  *
  */
 
-#heart, #echo {
-  position: fixed;
-  width: 300px; height: 300px;
-  top: calc(50% - 150px); left: calc(25% - 150px);
-  text-align: center;
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+@media screen and (max-width: 768px) {
+    #heart, #echo {
+        position: fixed;
+        width: 300px; height: 300px;
+        margin: 30px auto;
+        left: 0; right: 0;
+        text-align: center;
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
 }
+
+@media screen and (min-width: 768px) {
+    #heart, #echo {
+      position: fixed;
+      width: 300px; height: 300px;
+      top: calc(50% - 150px); left: calc(25% - 150px);
+      text-align: center;
+      -webkit-transform: scale(0.95);
+              transform: scale(0.95);
+    }
+}
+
+
 
 #heart { z-index: 8; }
 #echo  { z-index: 7; }

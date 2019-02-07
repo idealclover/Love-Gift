@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "my love gift to girlfriend",
   "scripts": {
-      "build": "coffee -c src/index.coffeescript"
+      "build": "coffee -c -o dist/ src/index.coffeescript",
+      "dev": "coffee -w -c -o dist/ src/index.coffeescript"
   },
   "repository": {
     "type": "git",

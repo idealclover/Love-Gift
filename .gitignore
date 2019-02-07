@@ -1,2 +1,6 @@
 node_modules/
 src/index.js
+
+#ignore dist folder
+dist/
+!dist/.gitkeep
