@@ -4,3 +4,5 @@ src/index.js
 #ignore dist folder
 dist/
 !dist/.gitkeep
+
+.idea/
