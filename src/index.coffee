@@ -16,18 +16,11 @@ body {
  * ...
  * ...hello?
  * 大家好！我是翠翠！idealclover~
- * 我在这里 祖国的大东北 苦逼地码着代码
- * 情人节快到了，可是还见不到女朋友 怎么办呢
- * 写一个网页送给她吧！送她一颗小心心怎么样~
- * 灵感来源是国外的一位网友pen#PwlXPP
+ * 情人节快到了，该给女朋友点什么呢~
+ * 写一个网页给子枨吧ww送她一颗小心心~
  * 可是~要怎么做呢~
- * 让我们一步一步来吧！
- */
-
-/*
- * 首先我们要做一个框框来放我们的代码~
- * 怎么做呢~看好啦~
- * 接下来~不要眨眼哦~
+ * 首先做一个框框来放我们的代码吧ww
+ * 那么~开动啦！！
  */
 
 pre {
@@ -131,7 +124,7 @@ pre em:not(.comment) { font-style: normal; }
 }
 
 
-/* It needs some depth  */
+/* 给它加上一点阴影ww  */
 
 #heart::after {
   box-shadow:
@@ -305,8 +298,12 @@ writeStyles = (message, index, interval) ->
     pre.scrollTop = pre.scrollHeight
     writeStyleChar message[index++]
     setTimeout (->
-      writeStyles message, index, interval
+      writeStyles message, index, if openComment then commentTime else codeTime
     ), interval
+#  $('#style-text').html styles
+#  $('#style-tag').html styles
+
+
 
 
 # appending the tags I'll need.
@@ -319,10 +316,11 @@ $('body').append """
 
 # faster typing in small iframe on codepen homepage
 # time = if window.innerWidth <= 578 then 4 else 16
-time = 30
+commentTime = 60
+codeTime = 8
 
 # starting it off
-writeStyles(styles, 0, time)
+writeStyles(styles, 0, commentTime)
 
 
 ###
