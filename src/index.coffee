@@ -266,16 +266,9 @@ pre em:not(.comment) { font-style: normal; }
 }
 
 /*
- * Wahoo!
- *
- * We did it!
- *
- * I mean *I* did it, but you know, whatever...
- * jake albaugh definitely did not have anything
- * to do with this.
- *
- * This pen loves CodePen!
- *
+ * 诶嘿~~
+ * 这样我们的小心心就做好啦~
+ * 怎么样~ >v< 还好看吗~~
  * 亲爱哒！情人节快乐！
  * 爱你哦！
  *
