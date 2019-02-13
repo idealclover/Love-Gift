@@ -1,14 +1,12 @@
 styles = """
 /*
- * "my love gift" v0.0.1
- * Robot rights protected under BOT License
- * Inspired by pen#PwLXXP
+ * "my love gift"💕 v0.0.1
  * Authored by idealclover
  */
 
 body {
   background-color: #1a1c24; color: #fff;
-  font-size: 1.2rem; line-height: 1.4;
+  font-size: 1.0rem; line-height: 1.4;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
@@ -35,7 +33,6 @@ pre {
   border-radius: 3px;
   box-shadow: 0px 4px 0px 2px rgba(0,0,0,0.1);
 }
-
 
 /*
  * 不行不行，全是白色看代码都要看昏了
@@ -93,8 +90,6 @@ pre em:not(.comment) { font-style: normal; }
     }
 }
 
-
-
 #heart { z-index: 8; }
 #echo  { z-index: 7; }
 
@@ -123,8 +118,7 @@ pre em:not(.comment) { font-style: normal; }
           transform-origin: 100% 100%;
 }
 
-
-/* 给它加上一点阴影ww  */
+/* 给它加上一点阴影ww */
 
 #heart::after {
   box-shadow:
@@ -135,7 +129,6 @@ pre em:not(.comment) { font-style: normal; }
   box-shadow:
     inset 6px 6px 0px 6px rgba(255,255,255,0.1);
 }
-
 
 /*
  * 这可是~我的小心心~
@@ -155,7 +148,6 @@ pre em:not(.comment) { font-style: normal; }
   font-size: 30px;
   text-shadow: -1px -1px 0px rgba(0,0,0,0.2);
 }
-
 
 /*
  * 接下来做什么呢~
@@ -202,7 +194,6 @@ pre em:not(.comment) { font-style: normal; }
   }
 }
 
-
 /*
  * 好哒！接下来准备让它跳起来吧ww
  */
@@ -230,7 +221,6 @@ pre em:not(.comment) { font-style: normal; }
   -webkit-animation-name: echo;
           animation-name: echo;
 }
-
 
 /*
  * 准备好了嘛~！
@@ -266,9 +256,18 @@ pre em:not(.comment) { font-style: normal; }
  * 爱你哦！
  *
  */
-"""
 
+/*
+ * "my love gift" v0.0.1
+ * Robot rights protected under BOT License & Apache2 license
+ * Inspired by pen#PwLXXP
+ * 谨以此网页献给我的女朋友子枨💕
+ * 你最可爱ww
+ */
+"""
+finalStyle = styles
 openComment = false
+isOn = true
 
 writeStyleChar = (which) ->
 	# begin wrapping open comments
@@ -297,13 +296,19 @@ writeStyles = (message, index, interval) ->
     pre = document.getElementById 'style-text'
     pre.scrollTop = pre.scrollHeight
     writeStyleChar message[index++]
-    setTimeout (->
-      writeStyles message, index, if openComment then commentTime else codeTime
-    ), interval
-#  $('#style-text').html styles
-#  $('#style-tag').html styles
+    if isOn
+      setTimeout (->
+        writeStyles message, index, if openComment then commentTime else codeTime
+      ), interval
 
-
+skip = () ->
+  isOn = false
+  setTimeout (->
+    $('#style-text').html finalStyle
+    $('#style-tag').html finalStyle
+    pre = document.getElementById 'style-text'
+    pre.scrollTop = pre.scrollHeight
+  ), 2*commentTime
 
 
 # appending the tags I'll need.
@@ -312,29 +317,28 @@ $('body').append """
 	<span id="echo"></span>
 	<span id="heart"><i></i></span>
 	<pre id="style-text"></pre>
+  <div style = 'position: fixed;left: 30px;bottom: 10px;'>
+    <a id='skipAnimation'>跳过动画</a>
+    <a style='color: #fff' href='http://love.idealclover.top'>重新播放</a>
+    <a style='color: #fff' target="_blank" href='https://github.com/idealclover/Love-Gift'>项目地址</a>
+    <a style='color: #fff' target="_blank" href='https://www.idealclover.top/'>我的博客</a>
+  </div>
 """
+
+
+#  <a href='https://www.idealclover.top'>idealclover</a>
+
 
 # faster typing in small iframe on codepen homepage
 # time = if window.innerWidth <= 578 then 4 else 16
 commentTime = 60
-codeTime = 8
+codeTime = 20
+
+$(document).on 'ready page:load', ->
+  $('#skipAnimation').click ->
+    skip()
 
 # starting it off
 writeStyles(styles, 0, commentTime)
 
 
-###
-Changelog:
-1.0.0: i exist!
-1.0.1: heart instead of circle
-1.0.2: including standard CSS3 transforms and animations
-	was only using `-webkit` to be less verbose (standard transforms dont work in safari)
-	now works in FF
-1.0.3: crossbrowser echo
-	nested `scale()` styles (scaled in scaled) only worked in chrome
-	moved echo out of heart to fix
-1.0.4: more efficient animations
-	`0%, 100% {}` instead of duplicated keyframes
-1.0.5: overflwo fix
-  `overflow: auto` on the `pre`
-###
