@@ -1,4 +1,4 @@
-> 情人节快乐！
+> 💕情人节快乐！
 
 ## Love-Gift 送给子枨的情人节礼物
 
@@ -17,3 +17,9 @@
 npm run dev //调试模式，实时检测更改并编译
 npm run build //编译静态文件
 ```
+
+### 开源协议
+
+本项目在 [pen#pwlxxp](https://codepen.io/jakealbaugh/pen/PwLXXP) 项目基础上，对布局等进行了改动，采用混合开源协议
+* 源项目部分使用[BOT LICENSE](https://github.com/idealclover/Love-Gift/blob/master/LICENSE_OLD)
+* 本项目更改部分使用 Apache2.0协议
