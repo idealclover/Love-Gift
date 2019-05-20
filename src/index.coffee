@@ -340,5 +340,3 @@ $(document).on 'ready page:load', ->
 
 # starting it off
 writeStyles(styles, 0, commentTime)
-
-

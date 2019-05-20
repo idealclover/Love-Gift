@@ -10,7 +10,9 @@
 
 ### 你也想整一个？
 
-#### 使用 NPM 生成静态文件并部署（推荐）
+#### 方法一：使用 NPM 生成静态文件并部署（推荐）
+
+**适用于对相关编程有所了解的同学**
 
 1. 安装nodejs与npm：[点击这里](http://nodejs.cn/download/)
 2. clone this repository ``` git clone https://github.com/idealclover/Resume.git```
@@ -32,7 +34,9 @@ npm run build //编译静态文件
 
 5. 部署 ```dist/``` 目录下的文件至服务器，测试访问
 
-#### 下载 release 直接修改
+#### 方案二：下载 release 直接修改
+
+**适合小白**
 
 在 [这里](https://github.com/idealclover/Love-Gift/releases) 下载 whole_version 修改其中的 index.js 文件
 
@@ -40,4 +44,4 @@ npm run build //编译静态文件
 
 本项目在 [pen#pwlxxp](https://codepen.io/jakealbaugh/pen/PwLXXP) 项目基础上，对布局等进行了改动，采用混合开源协议
 * 源项目部分使用[BOT LICENSE](https://github.com/idealclover/Love-Gift/blob/master/LICENSE_OLD)
-* 本项目更改部分使用 Apache2.0协议
+* 本项目更改部分使用 Apache2.0协议 **意思是需要注明原项目出处**
